@@ -8,7 +8,7 @@
           <div class="input-burger">
               <p class="lead-burger">{{this.burger_name}}</p>
               <span class="input-burger-btn">
-                  <form action="/api/burgers/{{this.id}}?_method=PUT" method="POST">
+                  <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
                         <input type="hidden" name="devoured" value="true">
                         <button class="devour-burger" type="submit">Devour it!</button>
                   </form>
