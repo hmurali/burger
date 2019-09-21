@@ -15,7 +15,7 @@ router.get("/", function(req, res) {
         res.render("index", hbsObject);
     });
 });
-
+// This route works normally. Lets me add a new burger to the list.
 router.post("/burgers", function(req, res) {
     burger.insertOne(["burger_name"], [req.body.burger_name], function(result) {
         // Send back the ID of the new quote
@@ -23,7 +23,8 @@ router.post("/burgers", function(req, res) {
         res.redirect("/");
     });
 });
-
+/* This is the route I am having issues getting to work properly. 
+I keep getting this warning: Cannot POST /burgers/1 */
 router.put("/burgers/:id", function(req, res) {
     var condition = "id = " + req.params.id;
 
