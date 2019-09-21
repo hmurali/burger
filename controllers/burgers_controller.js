@@ -24,7 +24,7 @@ router.post("/burgers", function(req, res) {
     });
 });
 /* This is the route I am having issues getting to work properly. 
-I keep getting this warning: Cannot POST /burgers/1 */
+I keep getting this warning: Cannot POST /burgers/1. */
 router.put("/burgers/:id", function(req, res) {
     var condition = "id = " + req.params.id;
 
